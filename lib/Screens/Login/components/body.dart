@@ -4,7 +4,7 @@ import 'package:nhs_doctorapp/Screens/Login/components/background.dart';
 import 'package:nhs_doctorapp/Screens/SignUp/components/or_divider.dart';
 import 'package:nhs_doctorapp/Screens/SignUp/components/social_icon.dart';
 import 'package:nhs_doctorapp/Screens/SignUp/signup_screen.dart';
-import 'package:nhs_doctorapp/Screens/ViewAppointments/view_appointments_screen.dart';
+import 'package:nhs_doctorapp/Screens/Dashboard/dashboard.dart';
 import 'package:nhs_doctorapp/components/already_have_an_account_check.dart';
 import 'package:nhs_doctorapp/components/rounded_button.dart';
 import 'package:nhs_doctorapp/components/rounded_input_field.dart';
@@ -56,16 +56,14 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Log In",
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return ViewAppointmentsScreen();
-                    },
-                  ),
-                );
-              },
+              press: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Dashboard();
+                  },
+                ),
+              );},
             ),
             SizedBox(
               width: 10,
