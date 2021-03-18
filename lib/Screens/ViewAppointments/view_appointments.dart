@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nhs_doctorapp/Screens/Dashboard/grid_dashboard.dart';
 import 'package:nhs_doctorapp/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 class ViewAppointments extends StatefulWidget {
   @override
@@ -9,6 +10,15 @@ class ViewAppointments extends StatefulWidget {
 }
 
 class _ViewAppointmentsState extends State<ViewAppointments> {
+  CalendarController _controller;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _controller = CalendarController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +38,8 @@ class _ViewAppointmentsState extends State<ViewAppointments> {
           ),
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Text("WELCOME TO APPOINTMENTS")
-        ],
+      body: SingleChildScrollView(
+
       ),
     );
   }
