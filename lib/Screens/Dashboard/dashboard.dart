@@ -77,14 +77,6 @@ class _DashboardState extends State<Dashboard> {
             height: 40,
           ),
           GridDashboard(),
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: Image.asset(
-              "assets/images/1280px-NHS-Logo.svg.png",
-              width: 50,
-            ),
-          ),
         ],
       ),
     );

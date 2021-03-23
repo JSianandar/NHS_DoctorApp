@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "WELCOME NHS DOCTORS",
+              "WELCOME TO AntEMR",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
             ),
             SvgPicture.asset(

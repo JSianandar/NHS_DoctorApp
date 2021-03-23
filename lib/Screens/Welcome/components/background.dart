@@ -17,19 +17,20 @@ class Background extends StatelessWidget {
         alignment: Alignment.center,
         children:<Widget>[
           Positioned(
-            bottom: 0,
-            left: -20,
+            top: 175,
             child: Image.asset(
-              "assets/images/image-removebg-preview.png",
-              width: size.width * 1.1,
+              "assets/images/WhatsApp Image 2021-03-18 at 13.24.24.jpeg",
+              width: size.width * 0.6,
+              color: Color.fromRGBO(255, 255, 255, 0.8),
+              colorBlendMode: BlendMode.modulate,
             ),
           ),
           Positioned(
             bottom: 5,
-            right: 5,
+            right: 0,
             child: Image.asset(
-              "assets/images/1280px-NHS-Logo.svg.png",
-              width: size.width * 0.1,
+              "assets/images/image-removebg-preview.png",
+              width: size.width * 0.2,
             ),
           ),
           Positioned(

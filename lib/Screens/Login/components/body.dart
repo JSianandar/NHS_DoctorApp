@@ -35,8 +35,8 @@ class Body extends StatelessWidget {
               height: 20,
             ),
             Image.asset(
-              "assets/images/1280px-NHS-Logo.svg.png",
-              height: size.height * 0.10,
+              "assets/images/WhatsApp Image 2021-03-18 at 13.24.24.jpeg",
+              height: size.height * 0.13,
               color: Color.fromRGBO(255, 255, 255, 1.0),
               colorBlendMode: BlendMode.modulate,
             ),
