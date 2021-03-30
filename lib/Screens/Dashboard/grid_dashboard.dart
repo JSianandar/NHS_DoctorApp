@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nhs_doctorapp/Screens/Profile/profile_screen.dart';
 import 'package:nhs_doctorapp/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nhs_doctorapp/Screens/ViewAppointments/view_appointments.dart';
@@ -12,7 +13,7 @@ class GridDashboard extends StatelessWidget {
 
   Item Item2 = new Item(
       title: "Appointments",
-      subtitle: "March 19, 2021",
+      subtitle: "March 27, 2021",
       img: "assets/images/unnamed (1).png"
   );
 
@@ -41,44 +42,51 @@ class GridDashboard extends StatelessWidget {
         crossAxisSpacing: 18,
         mainAxisSpacing: 18,
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Image.asset(
-                  Item1.img,
-                  width: 42,
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-                Text(
-                  Item1.title,
-                  style: GoogleFonts.openSans(
-                      textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  Item1.subtitle,
-                  style: GoogleFonts.openSans(
-                      textStyle: TextStyle(
-                          color: Colors.white38,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600)),
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(
+                  builder: (context) => ProfileScreen());
+              Navigator.push(context, route);
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    Item1.img,
+                    width: 42,
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                  Text(
+                    Item1.title,
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    Item1.subtitle,
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            color: Colors.white38,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                ],
+              ),
             ),
           ),
 
@@ -162,6 +170,47 @@ class GridDashboard extends StatelessWidget {
                 ),
                 Text(
                   Item3.subtitle,
+                  style: GoogleFonts.openSans(
+                      textStyle: TextStyle(
+                          color: Colors.white38,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600)),
+                ),
+                SizedBox(
+                  height: 14,
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            decoration: BoxDecoration(
+              color: kPrimaryColor,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  Item4.img,
+                  width: 52,
+                ),
+                SizedBox(
+                  height: 14,
+                ),
+                Text(
+                  Item4.title,
+                  style: GoogleFonts.openSans(
+                      textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600)),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  Item4.subtitle,
                   style: GoogleFonts.openSans(
                       textStyle: TextStyle(
                           color: Colors.white38,

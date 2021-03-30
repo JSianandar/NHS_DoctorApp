@@ -4,7 +4,7 @@ import 'package:nhs_doctorapp/constants.dart';
 import 'package:nhs_doctorapp/Screens/AppointmentDetails/gridicons.dart';
 import 'package:nhs_doctorapp/components/rounded_button.dart';
 
-class AppointmentDetails extends StatelessWidget {
+class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -45,7 +45,7 @@ class AppointmentDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.green[300],
                       image: DecorationImage(
-                        image: AssetImage("assets/images/image-removebg-preview (19).png")
+                          image: AssetImage("assets/images/purepng.com-doctorsdoctorsdoctors-and-nursesa-qualified-practitioner-of-medicine-aclinicianmedical-practitionermale-doctornotepad-1421526857009zrma0.png")
                       ),
                     ),
                   ),
@@ -53,7 +53,7 @@ class AppointmentDetails extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'MR. RAYMOND, 30',
+                    'DR. JASON ADAMS, 35',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -61,88 +61,146 @@ class AppointmentDetails extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  Text(
+                    'M.Sc - Anatomy',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                    ),
+                  ),
+                  Text(
+                    'General Physician, 12 Years Experience',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                    ),
+                  ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    'MARCH 19TH 2021',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    '9.30 A.M. - 10.30 A.M.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'HOME, BEKASI, WEST JAVA',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'OFFLINE CONSULTATION',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 100,
+                      ),
+                      Icon(
+                        Icons.home,
+                        color: Colors.black,
+                        size: 24.0,
+                      ),
+                      SizedBox(
+                        width: 13,
+                      ),
+                      Text(
+                        "Full Address",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: 5,
                   ),
                   Text(
-                    'NOTES: POSSIBLE SYMPTOMS OF DIABETES TYPE 2 ',
+                    ' Jl Cipinang Pisangan 130, DKI Jakarta, Indonesia, 13230 ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 100,
+                      ),
+                      Icon(
+                        Icons.phone,
+                        color: Colors.black,
+                        size: 24.0,
+                      ),
+                      SizedBox(
+                        width: 13,
+                      ),
+                      Text(
+                        "Phone Number",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    ' +62 812 9000 9445  ',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
                     ),
                   ),
 
                   SizedBox(
                     height: 10,
                   ),
-
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 100,
+                      ),
+                      Icon(
+                        Icons.email,
+                        color: Colors.black,
+                        size: 24.0,
+                      ),
+                      SizedBox(
+                        width: 13,
+                      ),
+                      Text(
+                        "Email",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
                   Text(
-                    'COMPLETED',
+                    ' jasonadams132@gmail.com ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
                     ),
                   ),
+
+
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   RoundedButton(
-                    text: "Transaction History",
+                    text: "Edit Profile",
                     press: (){},
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+
                   RoundedButton(
-                    text: "Delete Appointment",
+                    text: "Upload Certificates",
                     color: Colors.red,
                     press: (){},
-                  ),
-                  SizedBox(
-                    height: 30,
                   ),
 
                 ],

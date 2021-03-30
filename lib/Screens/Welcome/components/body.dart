@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
                 "assets/icons/chat.svg",
                 color: Color.fromRGBO(255, 255, 255, 0.0),
                 colorBlendMode: BlendMode.modulate,
-                height: size.height * 0.52,
+                height: size.height * 0.49,
             ),
             RoundedButton(
               text: "Log In",

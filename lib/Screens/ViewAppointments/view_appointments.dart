@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nhs_doctorapp/Screens/AppointmentDetails/appointmentd_details2.dart';
 import 'package:nhs_doctorapp/Screens/Dashboard/grid_dashboard.dart';
 import 'package:nhs_doctorapp/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,13 +28,11 @@ class _ViewAppointmentsState extends State<ViewAppointments> {
       backgroundColor: Colors.tealAccent[50],
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
-        title: Text(
-          'NHS Doctor App',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontSize: 20,
-          ),
+        title:
+        Image.asset(
+          "assets/images/White-01-01.png",
+          fit: BoxFit.contain,
+          height: 55,
         ),
         actions:<Widget> [
           IconButton(icon: Icon(Icons.notifications_active), onPressed: (){}
@@ -73,7 +72,7 @@ class _ViewAppointmentsState extends State<ViewAppointments> {
             ),
             GestureDetector(
               onTap: (){Route route = MaterialPageRoute(
-                  builder: (context) => (ProfileScreen()));
+                  builder: (context) => (AppointmentDetails()));
               Navigator.push(context, route);
               },
               child: Card(
@@ -88,28 +87,74 @@ class _ViewAppointmentsState extends State<ViewAppointments> {
                         "Mr. Raymond",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Text(
                         "Completed",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 10,
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Text(
                         "March 19, 2021",
                         style: TextStyle(
                           color: Colors.white,
+                          fontSize: 10,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            GestureDetector(
+              onTap: (){Route route = MaterialPageRoute(
+                  builder: (context) => (AppointmentDetails2()));
+              Navigator.push(context, route);
+              },
+              child: Card(
+                color: kPrimaryColor,
+                margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      Text(
+                        "Mr. Williams",
+                        style: TextStyle(
+                          color: Colors.white,
                           fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "Pending",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "March 27, 2021",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
                         ),
                       ),
                     ],

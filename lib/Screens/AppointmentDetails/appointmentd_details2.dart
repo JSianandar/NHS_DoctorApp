@@ -4,7 +4,7 @@ import 'package:nhs_doctorapp/constants.dart';
 import 'package:nhs_doctorapp/Screens/AppointmentDetails/gridicons.dart';
 import 'package:nhs_doctorapp/components/rounded_button.dart';
 
-class AppointmentDetails extends StatelessWidget {
+class AppointmentDetails2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -45,7 +45,7 @@ class AppointmentDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.green[300],
                       image: DecorationImage(
-                        image: AssetImage("assets/images/image-removebg-preview (19).png")
+                          image: AssetImage("assets/images/man_PNG6531.png")
                       ),
                     ),
                   ),
@@ -53,7 +53,7 @@ class AppointmentDetails extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'MR. RAYMOND, 30',
+                    'MR. WILLIAMS, 42',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -65,7 +65,7 @@ class AppointmentDetails extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'MARCH 19TH 2021',
+                    'MARCH 27TH 2021',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -74,7 +74,7 @@ class AppointmentDetails extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '9.30 A.M. - 10.30 A.M.',
+                    '11.30 A.M. - 13.00 P.M.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -83,7 +83,7 @@ class AppointmentDetails extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'HOME, BEKASI, WEST JAVA',
+                    'HOME, KEMANG, JAKARTA',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -104,7 +104,7 @@ class AppointmentDetails extends StatelessWidget {
                     height: 5,
                   ),
                   Text(
-                    'NOTES: POSSIBLE SYMPTOMS OF DIABETES TYPE 2 ',
+                    'NOTES: POSSIBLE SYMPTOMS OF SINUS INFECTION ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -118,7 +118,7 @@ class AppointmentDetails extends StatelessWidget {
                   ),
 
                   Text(
-                    'COMPLETED',
+                    'PENDING',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -130,21 +130,20 @@ class AppointmentDetails extends StatelessWidget {
                     height: 20,
                   ),
                   RoundedButton(
-                    text: "Transaction History",
+                    text: "Cancel Appointment",
                     press: (){},
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   RoundedButton(
-                    text: "Delete Appointment",
+                    text: "Contact Patient",
                     color: Colors.red,
                     press: (){},
                   ),
                   SizedBox(
                     height: 30,
                   ),
-
                 ],
               ),
             ),

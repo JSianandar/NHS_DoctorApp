@@ -17,12 +17,10 @@ class Background extends StatelessWidget {
         alignment: Alignment.center,
         children:<Widget>[
           Positioned(
-            top: 175,
+            top: 125,
             child: Image.asset(
-              "assets/images/WhatsApp Image 2021-03-18 at 13.24.24.jpeg",
-              width: size.width * 0.6,
-              color: Color.fromRGBO(255, 255, 255, 0.8),
-              colorBlendMode: BlendMode.modulate,
+              "assets/images/Colour-03.png",
+              width: size.width * 0.95,
             ),
           ),
           Positioned(
@@ -30,11 +28,11 @@ class Background extends StatelessWidget {
             right: 0,
             child: Image.asset(
               "assets/images/image-removebg-preview.png",
-              width: size.width * 0.2,
+              width: size.width * 0.25,
             ),
           ),
           Positioned(
-            bottom: 37.5,
+            bottom: 50.0,
             child: Image.asset(
               "assets/images/bluecircle.png",
               width: size.width * 0.8,
@@ -43,7 +41,7 @@ class Background extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 50,
+            bottom: 62.5,
             child: Image.asset(
               "assets/images/greencircle.png",
               width: size.width * 0.7,

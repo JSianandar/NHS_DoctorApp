@@ -15,14 +15,12 @@ class _DashboardState extends State<Dashboard> {
       backgroundColor: kPrimaryLightColor,
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
-        title: Text(
-          'NHS Doctor App',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontSize: 20,
+        title:
+          Image.asset(
+            "assets/images/White-01-01.png",
+            fit: BoxFit.contain,
+            height: 55,
           ),
-        ),
         actions:<Widget> [
           IconButton(icon: Icon(Icons.notifications_active), onPressed: (){}
           ),

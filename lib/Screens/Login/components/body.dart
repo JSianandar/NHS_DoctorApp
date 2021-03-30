@@ -30,19 +30,15 @@ class Body extends StatelessWidget {
                 "Log In",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            SizedBox(
-              width: 10,
-              height: 20,
-            ),
             Image.asset(
-              "assets/images/WhatsApp Image 2021-03-18 at 13.24.24.jpeg",
-              height: size.height * 0.13,
+              "assets/images/Colour-03.png",
+              height: size.height * 0.15,
               color: Color.fromRGBO(255, 255, 255, 1.0),
               colorBlendMode: BlendMode.modulate,
             ),
             SizedBox(
               width: 10,
-              height: 20,
+              height: 10,
             ),
             RoundedInputField(
               hintText: "Your Email",
