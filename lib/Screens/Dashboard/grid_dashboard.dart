@@ -3,6 +3,7 @@ import 'package:nhs_doctorapp/Screens/Profile/profile_screen.dart';
 import 'package:nhs_doctorapp/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nhs_doctorapp/Screens/ViewAppointments/view_appointments.dart';
+import 'package:nhs_doctorapp/Screens/PatientList/patient_list.dart';
 
 class GridDashboard extends StatelessWidget {
   Item Item1 = new Item(
@@ -24,8 +25,8 @@ class GridDashboard extends StatelessWidget {
   );
 
   Item Item4 = new Item(
-      title: "Emergency",
-      subtitle: "Services",
+      title: "Patients",
+      subtitle: "Patients List",
       img: "assets/images/medical-emergency-1561072-1322977.png"
   );
 
@@ -183,44 +184,51 @@ class GridDashboard extends StatelessWidget {
             ),
           ),
 
-          Container(
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Image.asset(
-                  Item4.img,
-                  width: 52,
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-                Text(
-                  Item4.title,
-                  style: GoogleFonts.openSans(
-                      textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600)),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  Item4.subtitle,
-                  style: GoogleFonts.openSans(
-                      textStyle: TextStyle(
-                          color: Colors.white38,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600)),
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-              ],
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(
+                  builder: (context) => PatientList());
+              Navigator.push(context, route);
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    Item4.img,
+                    width: 52,
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                  Text(
+                    Item4.title,
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    Item4.subtitle,
+                    style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                            color: Colors.white38,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                ],
+              ),
             ),
           ),
 

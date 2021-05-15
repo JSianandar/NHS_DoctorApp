@@ -198,11 +198,10 @@ class ProfileScreen extends StatelessWidget {
                   ),
 
                   RoundedButton(
-                    text: "Upload Certificates",
+                    text: "Logout",
                     color: Colors.red,
                     press: (){},
                   ),
-
                 ],
               ),
             ),

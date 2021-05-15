@@ -1,30 +1,32 @@
+import 'package:nhs_doctorapp/Screens/SignUp/components/body.dart';
 import 'package:flutter/material.dart';
 import 'package:nhs_doctorapp/components/text_field_container.dart';
 import 'package:nhs_doctorapp/constants.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+
+class RoundedFirstNameField extends StatelessWidget {
+  final String hintText;
+  final IconData icon;
   final ValueChanged<String> onChanged;
-  const RoundedPasswordField({
-    Key key, this.onChanged,
+  const RoundedFirstNameField({
+    Key key,
+    this.hintText,
+    this.icon = Icons.person,
+    this.onChanged,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        obscureText: true,
         onChanged: onChanged,
         style: TextStyle(fontSize: 15),
         decoration: InputDecoration(
-          hintText: "Password",
           icon: Icon(
-            Icons.lock,
+            icon,
             color: kPrimaryColor,
           ),
-          suffixIcon: Icon(
-            Icons.visibility,
-            color: kPrimaryColor,
-          ),
+          hintText: hintText,
           border: InputBorder.none,
         ),
       ),

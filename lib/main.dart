@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'file:///D:/NHSDoctorApp/nhs_doctorapp/lib/Screens/Welcome/welcome_screen.dart';
 import 'package:nhs_doctorapp/constants.dart';
+import 'package:nhs_doctorapp/Screens/Dashboard/dashboard.dart';
+import 'package:nhs_doctorapp/Screens/Login/login_screen.dart';
 
 void main() => runApp(new NHSDoctorApp() );
 
@@ -14,7 +16,7 @@ class NHSDoctorApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.lightGreen[100],
       ),
-      home: WelcomeScreen(),
+      home: new WelcomeScreen(),
     );
   }
 }

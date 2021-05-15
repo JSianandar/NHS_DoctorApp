@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nhs_doctorapp/Screens/Login/components/background.dart';
@@ -8,15 +10,64 @@ import 'package:nhs_doctorapp/Screens/Dashboard/dashboard.dart';
 import 'package:nhs_doctorapp/components/already_have_an_account_check.dart';
 import 'package:nhs_doctorapp/components/rounded_button.dart';
 import 'package:nhs_doctorapp/components/rounded_input_field.dart';
-import 'package:nhs_doctorapp/components/rounded_password_field.dart';
+import 'package:nhs_doctorapp/components/rounded_confirm_password_field.dart';
 import 'package:nhs_doctorapp/components/text_field_container.dart';
 import 'package:nhs_doctorapp/constants.dart';
 
+import 'package:http/http.dart' as http;
+import 'dart:async';
 
-class Body extends StatelessWidget {
+String username='';
+
+class Body extends StatefulWidget {
   const Body({
     Key key,
   }) : super(key: key);
+
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+
+  String msg='';
+
+  TextEditingController user = new TextEditingController();
+  TextEditingController password = new TextEditingController();
+
+  Future<List> _login() async {
+    print("Jalan");
+    print("User: " + user.text);
+    print("Pass: " + password.text);
+    final response = await http.post("http://10.0.2.2/nhsvalidation/login.php",
+    body:{
+      "username" : user.text,
+      "password" : password.text,
+    });
+
+    print(response.body);
+
+    var datauser = json.decode(response.body);
+    if(datauser.length==0){
+      setState(() {
+        msg="Login Failed. Try again";
+      });
+    }else{
+      print("Welcome Doctor");
+      Navigator.push(
+        context,
+          MaterialPageRoute(
+            builder: (context) {
+              return Dashboard();
+            }
+          ),
+      );
+      setState(() {
+        username= datauser[0]['username'];
+      });
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,26 +91,67 @@ class Body extends StatelessWidget {
               width: 10,
               height: 10,
             ),
-            RoundedInputField(
-              hintText: "Your Email",
-              onChanged: (value) {},
+
+            TextFieldContainer(
+              child: TextField(
+                controller: user,
+                style: TextStyle(fontSize: 15),
+                decoration: InputDecoration(
+                  icon: Icon(
+                    Icons.people,
+                    color: kPrimaryColor,
+                  ),
+                  hintText: "Your Username",
+                  border: InputBorder.none,
+                ),
+              ),
             ),
-            RoundedPasswordField(onChanged: (value){},
+            TextFieldContainer(
+              child: TextField(
+                obscureText: true,
+                controller: password,
+                style: TextStyle(fontSize: 15),
+                decoration: InputDecoration(
+                  hintText: "Your Password",
+                  icon: Icon(
+                    Icons.lock,
+                    color: kPrimaryColor,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.visibility,
+                    color: kPrimaryColor,
+                  ),
+                  border: InputBorder.none,
+                ),
+              ),
             ),
+
             SizedBox(
               width: 10,
               height: 10,
             ),
             RoundedButton(
               text: "Log In",
-              press: () {Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return Dashboard();
-                  },
-                ),
-              );},
+              press: () {
+                _login();
+                //   Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) {
+                //       return Dashboard();
+                //     },
+                //   ),
+                // );},
+              },
+            ),
+            SizedBox(
+              width: 10,
+              height: 10,
+            ),
+            Text(
+              msg,style: TextStyle(
+                fontSize: 20.0,color: Colors.red
+              ),
             ),
             SizedBox(
               width: 10,

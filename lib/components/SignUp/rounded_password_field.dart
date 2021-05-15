@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nhs_doctorapp/components/text_field_container.dart';
 import 'package:nhs_doctorapp/constants.dart';
+import 'package:nhs_doctorapp/Screens/SignUp/components/body.dart';
 
-class RoundedConfirmPasswordField extends StatelessWidget {
+class RoundedPasswordField extends StatelessWidget {
   final ValueChanged<String> onChanged;
-  const RoundedConfirmPasswordField({
+  const RoundedPasswordField({
     Key key, this.onChanged,
   }) : super(key: key);
 
@@ -16,7 +17,7 @@ class RoundedConfirmPasswordField extends StatelessWidget {
         onChanged: onChanged,
         style: TextStyle(fontSize: 15),
         decoration: InputDecoration(
-          hintText: "Enter Your Password",
+          hintText: "Password",
           icon: Icon(
             Icons.lock,
             color: kPrimaryColor,
