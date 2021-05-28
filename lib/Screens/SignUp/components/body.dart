@@ -38,44 +38,44 @@ class _BodyState extends State<Body> {
 
   TextEditingController email = TextEditingController();
 
-  /*Future register()async{
-    print("goes");
-    print("User: " + user.text);
-    print("Pass" + pass.text);
-    var url = "https://192.168.1.10/NHSDoctorApp_Validation/register.php";
-    var response = await http.post(url, body: {
-      "username" : user.text,
-      "password" : pass.text,
-      "fname"    : fname.text,
-      "lname"    : lname.text,
-      "email"    : email.text,
-    });
+   Future <List> register()async{
+      print("goes");
+      print("User: " + user.text);
+      print("Pass" + pass.text);
+      var url = "http://10.0.2.2/nhsvalidation/register.php";
+      var response = await http.post(url, body: {
+        "username" : user.text,
+        "password" : pass.text,
+        "fname"    : fname.text,
+        "lname"    : lname.text,
+        "email"    : email.text,
+      });
 
-    var data = jsonDecode(response.body);
-    if (data == "Error") {
-      Fluttertoast.showToast(
-          msg: "Sign Up Failed",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
+      var data = jsonDecode(response.body);
+      if (data == "Error") {
+        Fluttertoast.showToast(
+            msg: "Sign Up Failed",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
 
+      }
+      else{
+        Fluttertoast.showToast(
+            msg: "Sign Up Successful",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
+      }
     }
-    else{
-      Fluttertoast.showToast(
-          msg: "Sign Up Successful",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
-    }
-  }*/
 
   @override
   Widget build(BuildContext context) {
